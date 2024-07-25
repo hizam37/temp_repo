@@ -1,0 +1,60 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-users
+      author: hizam
+      changes:
+        - createTable:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: uuid
+                  type: VARCHAR(200)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: deleted
+                  type: boolean
+                  constraints:
+                    nullable: false
+              - column:
+                  name: email
+                  type: VARCHAR(200)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: password
+                  type: VARCHAR(200)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: first_name
+                  type: VARCHAR(200)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: last_name
+                  type: VARCHAR(200)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: captcha_code
+                  type: VARCHAR(200)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: captcha_secret
+                  type: VARCHAR(200)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: roles
+                  type: VARCHAR(200)
+                  constraints:
+                    nullable: false
